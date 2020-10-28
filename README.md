@@ -3,6 +3,10 @@
 ### [LIVE SITE](https://volunteer-network-work.web.app/)
 ### [Server Site Repository](https://github.com/WebKawsar/volunteer-network-server-update)
 
+## Overview
+An user can select a social activity to participate. Also they will be able schedule their tasks by add a date.
+
+
 ## Features of Volunteer Network
 - Volunteer Network web site is an agency site that have an anthentication system.
 - An user can order service,  set a price and can upload an image as a sample.
