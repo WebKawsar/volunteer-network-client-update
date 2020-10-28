@@ -48,7 +48,7 @@ const Tasks = (props) => {
     const {_id, library, date, img} = props.activity;
     const handleClick = (id) => {
 
-        fetch(`http://localhost:8080/deleteTask/${id}`, {
+        fetch(`https://volunteer-network-simple.herokuapp.com/deleteTask/${id}`, {
             method: "DELETE"
         })
         .then(data => {
@@ -65,7 +65,7 @@ const Tasks = (props) => {
                 <Paper className={classes.paper}>
                     <Grid container className={classes.container}>
                         <Grid md={5} sm={12} item xs={12}>
-                            <img className={classes.image} src={`http://localhost:8080/${img}`} alt=""/>
+                            <img className={classes.image} src={`https://volunteer-network-simple.herokuapp.com/${img}`} alt=""/>
                         </Grid>
                         <Grid md={7} sm={12} item xs={12}>
                             <Box className={classes.taskContent}>

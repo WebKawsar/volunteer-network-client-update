@@ -52,7 +52,7 @@ const Home = (props) => {
                             component="img"
                             onClick={() => handleClick(_id)}
                             alt="Contemplative Reptile"
-                            image={`http://localhost:8080/${img}`}
+                            image={`https://volunteer-network-simple.herokuapp.com/${img}`}
                             title="Contemplative Reptile"
                         />
 

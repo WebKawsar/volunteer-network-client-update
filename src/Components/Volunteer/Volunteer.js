@@ -75,7 +75,7 @@ const Volunteer = () => {
     const [chooseTask, setChooseTask] = useState({});
     useEffect(() => {
 
-        fetch(`http://localhost:8080/register/volunteer/${id}`)
+        fetch(`https://volunteer-network-simple.herokuapp.com/register/volunteer/${id}`)
         .then(response => response.json())
         .then(data => setChooseTask(data))
 
@@ -86,7 +86,7 @@ const Volunteer = () => {
         const newData = data;
         newData.img = chooseTask.img;
 
-        fetch("http://localhost:8080/addVolunteerActivity", {
+        fetch("https://volunteer-network-simple.herokuapp.com/addVolunteerActivity", {
 
             method: 'POST',
             body: JSON.stringify(newData),

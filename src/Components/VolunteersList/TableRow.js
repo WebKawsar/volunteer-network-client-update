@@ -8,7 +8,7 @@ const TableRow = (props) => {
 
     const handleVolunter = (id) => {
 
-        fetch(`http://localhost:8080/deleteVolunteer/${id}`, {
+        fetch(`https://volunteer-network-simple.herokuapp.com/deleteVolunteer/${id}`, {
             method: "DELETE"
         })
         .then(data => {

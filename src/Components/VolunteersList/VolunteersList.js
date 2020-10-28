@@ -19,7 +19,7 @@ const VolunteersList = () => {
     const [volunteers, setVolunteers] = useState([]);
     useEffect(() => {
 
-        fetch("http://localhost:8080/admin/volunteers")
+        fetch("https://volunteer-network-simple.herokuapp.com/admin/volunteers")
         .then(response => response.json())
         .then(data => setVolunteers(data))
 

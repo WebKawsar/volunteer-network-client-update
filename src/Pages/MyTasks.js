@@ -15,7 +15,7 @@ const MyTasks = () => {
     const [task, setTask] = useState([]);
     useEffect(() => {
 
-        fetch(`http://localhost:8080/volunteer/myTasks?email=${loggedInUser.email}`)
+        fetch(`https://volunteer-network-simple.herokuapp.com/volunteer/myTasks?email=${loggedInUser.email}`)
         .then(response => response.json())
         .then(data => setTask(data))
 

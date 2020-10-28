@@ -81,7 +81,7 @@ const AdminAddEvent = () => {
     formData.append("data", js);
     formData.append("image", data.image[0]);
 
-    fetch("http://localhost:8080/addEvent", {
+    fetch("https://volunteer-network-simple.herokuapp.com/addEvent", {
       method: "POST",
       body: formData,
     })
