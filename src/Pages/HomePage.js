@@ -53,31 +53,36 @@ const HomePage = () => {
     }, [])
 
 
+    const [search, setSearch] = useState("");
+
+    console.log(search);
+
+
     return (
         <Box className="home">
             <Box className={classes.section}>
                 <Header></Header>
                 <Box className={classes.intro}>
                     <h1>i grow by helping people in need</h1>
-                    <input className={classes.input} type="text" name="" id="" placeholder="Search..."/>
+                    <input className={classes.input} onChange={(e) => setSearch(e.target.value.toLowerCase())} type="text" name="" id="" placeholder="Search..."/>
                     <input className={classes.submit} type="submit" value="Search"/>
                 </Box>
                 <Container className={classes.eventsItem}>
-                <Grid container>
-                    {   
-                        events.map((event, index) => 
-                            {
-                                let color = ["red", "blue", "green", "yellow", "purple", "tomato", "cyan"];
-                                let random = Math.floor(Math.random() * 7);
+                    <Grid container>
+                        {   
+                            events.filter(vol => vol.eventTitle.toLowerCase().includes(search.trim())).map((event, index) => 
+                                {
+                                    let color = ["red", "blue", "green", "yellow", "purple", "tomato", "cyan"];
+                                    let random = Math.floor(Math.random() * 7);
 
-                                return (<Home color={color[random]} key={event._id} event={event}></Home>)
-                                
-                            }
-                        
-                        )
-                    }
-                </Grid>
-            </Container>
+                                    return (<Home color={color[random]} key={event._id} event={event}></Home>)
+                                    
+                                }
+                            
+                            )
+                        }
+                    </Grid>
+                </Container>
             </Box>
         </Box>
     );
